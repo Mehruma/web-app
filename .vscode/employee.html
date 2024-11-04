@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css"> <!-- Link to the same CSS -->
-    <title>PhysioActivity - Login</title>
+    <link rel="stylesheet" href="employee.css">
+    <title>PhysioActivity - Employee Recommendations</title>
 </head>
 <body>
 
@@ -24,22 +24,19 @@
     </div>
 </header>
 
-<!-- Login Section -->
-<section class="login">
+<!-- Employee Health Input Section -->
+<section class="employee-health">
     <div class="container">
-        <h2>Login</h2>
-        <form id="loginForm" method="post">
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
-            <select required>
-                <option value="" disabled selected>Select Role</option>
-                <option value="employee">Employee</option>
-                <option value="hr">HR</option>
-                <option value="therapist">Therapist</option>
-            </select>
-            <button type="submit">Login</button>
+        <h2>Health Information Input</h2>
+        <form id="healthForm">
+            <textarea id="healthDetails" placeholder="Enter your health issues here..." required></textarea>
+            <button type="submit">Get Recommendations</button>
         </form>
-        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+
+        <h3>Your Recommendations:</h3>
+        <ul id="recommendationList"></ul>
+
+        <p>By using this service, you agree to our <a href="terms.html" target="_blank">Terms and Conditions</a>.</p>
     </div>
 </section>
 
@@ -50,7 +47,6 @@
     </div>
 </footer>
 
-<!-- Link to login.js -->
-<script src="login.js"></script>
+<script src="employee.js"></script>
 </body>
 </html>
